@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ollama Scraper</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Web Scraper</h1>
+      <div id="connection-status" class="status-badge pending">Checking Ollama...</div>
+    </header>
+
+    <div class="controls">
+      <div class="form-group">
+        <label for="model-select">Model</label>
+        <select id="model-select" disabled>
+          <option>Loading models...</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="user-prompt">What do you want to extract?</label>
+        <textarea id="user-prompt" placeholder="e.g., Summarize the main points or Extract all email addresses..."></textarea>
+      </div>
+
+      <button id="scrape-btn" disabled>Start Scraping</button>
+    </div>
+
+    <div class="history-section">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>History</h2>
+        <button id="clear-history-btn" style="background-color: #ff4d4d; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 12px;">Clear All</button>
+      </div>
+      <div id="history-list">
+        <!-- History items injected here -->
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

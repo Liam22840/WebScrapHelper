@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Ollama AI Scraper",
+  "version": "1.0",
+  "description": "Scrape web pages using local LLMs via Ollama.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:11434/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
