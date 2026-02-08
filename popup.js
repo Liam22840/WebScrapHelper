@@ -65,9 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Handle Clear History
   clearHistoryBtn.addEventListener('click', async () => {
-    if (confirm('Are you sure you want to clear all history?')) {
-      await browser.runtime.sendMessage({ action: "clearHistory" });
-    }
+    await browser.runtime.sendMessage({ action: "clearHistory" });
   });
 
   // 4. Listen for updates from background

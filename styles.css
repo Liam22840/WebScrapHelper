@@ -152,3 +152,14 @@ button:disabled {
 .dot-processing { background-color: #fbbf24; }
 .dot-completed { background-color: #10b981; }
 .dot-failed { background-color: #ef4444; }
+
+#clear-history-btn {
+  width: auto;
+  padding: 4px 8px;
+  font-size: 11px;
+  background-color: #ef4444;
+}
+
+#clear-history-btn:hover {
+  background-color: #dc2626;
+}
